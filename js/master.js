@@ -55,19 +55,22 @@ $(window).scroll(function() {
 			
   if($(window).scrollTop() > 100){
 
+    $('.icon-search').css('display', 'none');
+    $('.list-navbar').addClass('scroll');
     $('.navbar').addClass('fixed');
     $('.logo-brand img').css('width' , '100px');
     $('.icon-search li i').css('color' , '#fff');
     $('.navbar .list-navbar .toggle-icons i').css('color' , '#fff');
-    $('.top-page').fadeIn(1000);;
+    $('.top-page').addClass("active");
 
   } else{
-    
+    $('.icon-search').css('display', 'block');
+    $('.list-navbar').removeClass('scroll');
     $('.navbar').removeClass('fixed');
     $('.logo-brand img').css('width' , '180px');
     $('.icon-search li i').css('color' , '#333');
     $('.navbar .list-navbar .toggle-icons i').css('color' , '#333');
-    $('.top-page').fadeOut(1000);
+    $('.top-page').removeClass("active");
   }
 });
 $('.top-page').on('click' , function(){
